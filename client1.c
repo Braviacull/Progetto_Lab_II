@@ -49,7 +49,6 @@ int main(int argc, char const* argv[])
             if(close(fd_skt)<0)
                 xtermina("Errore chiusura socket", __LINE__, __FILE__);
 
-            puts("Connessione di tipo A chiusa con successo"); 
         }
         else {
             // controlla che non ci siano errori

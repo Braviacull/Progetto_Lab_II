@@ -276,7 +276,6 @@ int main(int argc, char *argv[]) {
         xtermina("Errore chiusura file\n", __LINE__, __FILE__);
     buffer_destroyer(wbuffer);
     buffer_destroyer(rbuffer);
-    
-    puts ("ARCHIVIO TERMINATO CON SUCCESSO\n");
+
     return 0;
 }

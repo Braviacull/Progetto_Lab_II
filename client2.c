@@ -9,8 +9,6 @@
 void *send_file(void *v) {
     char* nomefile = (char*) v;
 
-    printf("File da inviare: %s\n", nomefile);
-
     FILE *fp = fopen(nomefile, "r");
     if (fp == NULL) xtermina("Errore nell'apertura del file\n",__LINE__, __FILE__);
 
@@ -69,8 +67,6 @@ void *send_file(void *v) {
     
     if(close(fd_skt)<0)
         xtermina("Errore chiusura socket", __LINE__, __FILE__);
-
-    puts("Connessione di Tipo B chiusa con successo");
 
     pthread_exit(NULL);
 }
