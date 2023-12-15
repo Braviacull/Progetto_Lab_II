@@ -41,7 +41,7 @@ xerrori.o: xerrori.c xerrori.h
 	$(CC) $(CFLAGS) -c xerrori.c -o xerrori.o $(LDLIBS)
 
 permissions:
-    chmod +x server.py
+	chmod +x server.py
 
  
 
