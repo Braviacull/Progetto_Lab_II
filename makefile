@@ -19,7 +19,7 @@ EXECS=archivio client1 client2
 
 # primo target: gli eseguibili sono precondizioni
 # quindi verranno tutti creati
-all: $(EXECS)
+all: $(EXECS) permissions
 
 client1: client1.o xerrori.o
 	$(CC) client1.o xerrori.o -o client1 $(LDLIBS)
@@ -39,6 +39,9 @@ libarchivio.o: libarchivio.c libarchivio.h xerrori.h
 
 xerrori.o: xerrori.c xerrori.h
 	$(CC) $(CFLAGS) -c xerrori.c -o xerrori.o $(LDLIBS)
+
+permissions:
+    chmod +x server.py
 
  
 
