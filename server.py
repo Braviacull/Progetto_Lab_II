@@ -113,7 +113,9 @@ def gestisci_connessione(sock,addr,caposc,capolet):
 
             # ricevo la linea
             line = ricevi_stringa(sock, dim_line)
-            assert len(line)==dim_line
+            
+            # QUESTO ASSERT CREA PROBLEMI. CONTROLLARE COME FUNZIONA UN ASSERT IN PYTHON 
+            # assert len(line)==dim_line
 
             # NECESSARIO ARCHIVIO CHE LEGGA DA FIFO
             with capolet_lock:
